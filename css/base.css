@@ -1,0 +1,77 @@
+body {
+    background-image: url(../jpg/background.jpg);
+    background-repeat: repeat;
+}
+.container {
+    width: 90rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    /* align-items: center; */
+    margin: auto;
+    /* padding: auto; */
+}
+
+.container-power {
+    position: relative;
+    width: 109.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+}
+ul li {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #311D13; 
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    outline: none;
+    border: none;
+    font-family: "Fira Sans Medium", sans-serif;
+    color: white;
+    background: #F39F0F;
+    font-size: 1.25rem;
+    border-radius: 1rem;
+    padding: 1.4rem 2.4rem;
+}
+
+::placeholder {
+    color:#655132;
+}
+
+@media (max-width: 68rem) {
+    .container {
+        width: 68rem;
+    }
+
+    button {
+      font-size: 0.9rem;
+      padding: 1rem 1.4rem;
+    }
+}
+
+/* @media (max-width: 20rem) {
+    .container {
+        width: 20rem;
+    }
+
+    button {
+      font-size: 0.3rem;
+      padding: 0.4rem 1.3rem;
+    }
+} */
