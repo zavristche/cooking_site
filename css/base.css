@@ -9,7 +9,6 @@ body {
     justify-self: center;
     /* align-items: center; */
     margin: auto;
-    /* padding: auto; */
 }
 
 .container-power {
@@ -50,8 +49,31 @@ button {
     padding: 1.4rem 2.4rem;
 }
 
+select {
+    background-image: url(../svg/arrow.svg);
+    background-repeat: no-repeat;
+    background-color: #F6E9D6;
+    background-position: calc(100% - 15px) center;
+    color:#311D13;
+    border-radius: 1rem;
+    font-size: 1.125rem;
+    padding: 0.8rem 1.3rem;
+    outline: none;
+    border: none;
+    appearance: none;
+}
+
+  select option:checked {
+    color: #F6E9D6;
+    background-color: #655132;
+  }
+
 ::placeholder {
     color:#655132;
+}
+
+::selection {
+    background: #f8c66e;
 }
 
 @media (max-width: 68rem) {
@@ -65,13 +87,21 @@ button {
     }
 }
 
-/* @media (max-width: 20rem) {
+@media (max-width: 20rem) {
     .container {
         width: 20rem;
     }
-
+    
     button {
-      font-size: 0.3rem;
-      padding: 0.4rem 1.3rem;
+    font-size: 0.3rem;
+    padding: 0.4rem 1.3rem;
+    border-radius: 0.4rem;
     }
-} */
+
+    select {
+        background-image: url(../svg/arrow-mob.svg);
+        border-radius: 0.5rem;
+        font-size: 0.5rem;
+        padding: 0.4rem 0.8rem;
+    }
+}

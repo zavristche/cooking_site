@@ -3,27 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width">
 
-    <title>Вкусножуй</title>
+    <title>Поиск</title>
 
     <meta name="description" content="Ищи новые рецепты, сохраняй их в свою книгу и делись своими шедеврами с другими пользователями!"> 
     <!--Уникальное описание страницы. Используется парсерами URL-адресов в социальных сетях, таких как Twitter или Facebook.-->
     <meta property="og:title" content="Unique page title - My Site">
     <!--Изображение, отображаемое, когда вы делитесь ссылкой на страницу в социальных сетях, приложениях чата или других сайтах, которые очищают URL-адреса.-->
     <meta property="og:image" content="image.jpg">
-    <!--Цвет верхушки-->
-    <meta name="theme-color" content="#F39F0F">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#311D13">
+    <link rel="stylesheet" href="css/search.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
             <div class="container__header">
-                <div class="header__logo">
-                    <a href=""><img src="svg/logo.svg" alt="Вкусножуй" class="header__logo-pic"></a>
-                </div>
-
+                <a href="#" class="header__logo" style="background-image: url(../svg/logo.svg);"></a>  
                 <div class="header__search">
                     <form class="search-form">
                         <div class="search-form__content">
@@ -35,13 +31,13 @@
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href=""><img src="svg/plus.svg" alt="Записать новый рецепт"></a>
+                            <a href="#"><img class="header__nav-item-img" src="svg/plus.svg" alt="Записать новый рецепт"></a>
                         </li>
                         <li class="header__nav-item">
-                            <a href=""><img src="svg/heart.svg" alt="Моя книга рецептов"></a>
+                            <a href="#"><img class="header__nav-item-img" src="svg/heart.svg" alt="Моя книга рецептов"></a>
                         </li>
                         <li class="header__nav-item">
-                            <a href=""><img src="svg/user.svg" alt="Моя страница"></a>
+                            <a href="#"><img class="header__nav-item-img" src="svg/user.svg" alt="Моя страница"></a>
                         </li>
                     </ul>
                 </nav>
@@ -52,7 +48,7 @@
                 <div class="search-menu__search">
                     <form class="search-form">
                         <div class="search-form__content">
-                            <input class="search-form__input" type="text" placeholder="Найти рецепты, подборки, блоги">
+                            <input class="search-form__input-filter" type="text" placeholder="Найти рецепты, подборки, блоги">
                             <form class="button-form" action="#">
                                 <button class="search-menu__button-find" type="button">Найти</button>
                             </form>
@@ -60,7 +56,6 @@
                     </form>
                 </div>
                 <div class="search-menu__filter">
-                    <!-- type="button" -->
                     <button class="search-menu__filter-button" >
                         <img class="search-menu__filter-item" src="svg/filter.svg"></img>
                         <span class="search-menu__filter-libel">Фильтры</span>
@@ -68,360 +63,493 @@
                 </div>
                 <div class="search-menu__type">
                     <p class="search-menu__type-chapter">Тип материала</p>
+                    <div class="search-menu__parameters">
+                        <ul class="search-menu__materials">
+                            <li class="search-menu__materials-item">
+                                <form class="button-form" action="#">
+                                    <button class="search-menu__button-material" type="button">Все</button>
+                                </form>
+                            </li>
+                            <li class="search-menu__materials-item">
+                                <form class="button-form" action="#">
+                                    <button class="search-menu__button-material" type="button">Рецепты</button>
+                                </form>
+                            </li>
+                            <li class="search-menu__materials-item">
+                                <form class="button-form" action="#">
+                                    <button class="search-menu__button-material" type="button">Подборки</button>
+                                </form>
+                            </li>
+                            <li class="search-menu__materials-item">
+                                <form class="button-form" action="#">
+                                    <button class="search-menu__button-material" type="button">Блоги</button>
+                                </form>
+                            </li>
+                        </ul>
+                        <form class="select-form" action="#">
+                            <select class="search-menu__select" name="sort">
+                                <option value="sort-by">Сортировать по</option>
+                                <option value="alphabet">По алфавиту</option>
+                                <option value="date">По дате</option>
+                                <option value="rating">По количеству оценок</option>
+                              </select>
+                        </form>
+                    </div>
+                    
                 </div>
             </div>
         </article>
         <main class="main-search">
             <section class="main-search__content">
-
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
+                <article class="recipe-modul">
+                    <div class="recipe-module__overlay"></div>
+                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
+                    <div class="recipe-module__content">
+                        <ul class="recipe-block__tegs">
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">десерт</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">средне</a>
+                            </li>
+                            <li class="recipe-block__tegs-item">•</li>
+                            <li class="recipe-block__tegs-item">
+                                <a class="recipe-block__tegs-a" href="#">вишня</a>
+                            </li>
+                        </ul>
+                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
+                        <p class="recipe-block__user">От Натали</p>
+                    </div>
+                </article>
             </section>
-            <!-- <section class="main-first__content">
-                <article class="recipe-modul">
-                        <div class="recipe-module__overlay"></div>
-                        <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                        <div class="recipe-module__content">
-                            <ul class="recipe-block__tegs">
-                                <li class="recipe-block__tegs-item">
-                                    <a class="recipe-block__tegs-a" href="#">десерт</a>
-                                </li>
-                                <li class="recipe-block__tegs-item">•</li>
-                                <li class="recipe-block__tegs-item">
-                                    <a class="recipe-block__tegs-a" href="#">средне</a>
-                                </li>
-                                <li class="recipe-block__tegs-item">•</li>
-                                <li class="recipe-block__tegs-item">
-                                    <a class="recipe-block__tegs-a" href="#">вишня</a>
-                                </li>
-                            </ul>
-                            <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
-                            <p class="recipe-block__user">От Натали</p>
-                        </div>
-                </article>
-                <article class="recipe-modul"> 
-                    <div class="recipe-module__overlay"></div>
-                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">десерт</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">средне</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">вишня</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
-                        <p class="recipe-block__user">От Натали</p>
-                    </div>
-                </article>
-                <article class="compil-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="compil-module__image" style="background-image: url(jpg/preview/2.jpg);"></div>
-                    <div class="comil-module__image-2" style="background-image: url(jpg/preview/4.jpg);"></div>
-                    <div class="comil-module__image-3" style="background-image: url(jpg/preview/3.jpg);"></div>                        
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">сытное</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">грузинская</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">обед</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">ужин</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Подборка грузинских блюд</h3>
-                        <p class="recipe-block__user">От Амир Блаженный</p>
-                    </div>
-                </article>
-                <article class="compil-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="compil-module__image" style="background-image: url(jpg/preview/2.jpg);"></div>
-                    <div class="comil-module__image-2" style="background-image: url(jpg/preview/4.jpg);"></div>
-                    <div class="comil-module__image-3" style="background-image: url(jpg/preview/3.jpg);"></div>                        
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">сытное</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">грузинская</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">обед</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">ужин</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Подборка грузинских блюд</h3>
-                        <p class="recipe-block__user">От Амир Блаженный</p>
-                    </div>
-                </article>
-                <article class="recipe-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">десерт</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">средне</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">вишня</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
-                        <p class="recipe-block__user">От Натали</p>
-                    </div>
-                </article>
-                <article class="recipe-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">десерт</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">средне</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">вишня</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
-                        <p class="recipe-block__user">От Натали</p>
-                    </div>
-                </article>
-                <article class="recipe-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">десерт</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">средне</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">вишня</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
-                        <p class="recipe-block__user">От Натали</p>
-                    </div>
-                </article>
-                <article class="compil-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="compil-module__image" style="background-image: url(jpg/preview/2.jpg);"></div>
-                    <div class="comil-module__image-2" style="background-image: url(jpg/preview/4.jpg);"></div>
-                    <div class="comil-module__image-3" style="background-image: url(jpg/preview/3.jpg);"></div>                        
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">сытное</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">грузинская</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">обед</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">ужин</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Подборка грузинских блюд</h3>
-                        <p class="recipe-block__user">От Амир Блаженный</p>
-                    </div>
-                </article>
-                <article class="recipe-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">десерт</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">средне</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">вишня</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
-                        <p class="recipe-block__user">От Натали</p>
-                    </div>
-                </article>
-                <article class="recipe-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">десерт</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">средне</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">вишня</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
-                        <p class="recipe-block__user">От Натали</p>
-                    </div>
-                </article>
-                <article class="recipe-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">десерт</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">средне</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">вишня</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
-                        <p class="recipe-block__user">От Натали</p>
-                    </div>
-                </article>
-                <article class="compil-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="compil-module__image" style="background-image: url(jpg/preview/2.jpg);"></div>
-                    <div class="comil-module__image-2" style="background-image: url(jpg/preview/4.jpg);"></div>
-                    <div class="comil-module__image-3" style="background-image: url(jpg/preview/3.jpg);"></div>                        
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">сытное</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">грузинская</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">обед</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">ужин</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Подборка грузинских блюд</h3>
-                        <p class="recipe-block__user">От Амир Блаженный</p>
-                    </div>
-                </article>
-                <article class="compil-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="compil-module__image" style="background-image: url(jpg/preview/2.jpg);"></div>
-                    <div class="comil-module__image-2" style="background-image: url(jpg/preview/4.jpg);"></div>
-                    <div class="comil-module__image-3" style="background-image: url(jpg/preview/3.jpg);"></div>                        
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">сытное</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">грузинская</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">обед</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">ужин</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Подборка грузинских блюд</h3>
-                        <p class="recipe-block__user">От Амир Блаженный</p>
-                    </div>
-                </article>
-                <article class="recipe-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">десерт</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">средне</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">вишня</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
-                        <p class="recipe-block__user">От Натали</p>
-                    </div>
-                </article>
-                <article class="recipe-modul">
-                    <div class="recipe-module__overlay"></div>
-                    <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                    <div class="recipe-module__content">
-                        <ul class="recipe-block__tegs">
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">десерт</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">средне</a>
-                            </li>
-                            <li class="recipe-block__tegs-item">•</li>
-                            <li class="recipe-block__tegs-item">
-                                <a class="recipe-block__tegs-a" href="#">вишня</a>
-                            </li>
-                        </ul>
-                        <h3 сlass="recipe-block__chapter">Вишневый торт</h3>
-                        <p class="recipe-block__user">От Натали</p>
-                    </div>
-                </article> 
-            </section> -->
+            <div class="main-search__pagination">
+                <ul class="main-search__pagination-list">
+                    <li class="pagination-list__arrow">
+                        <a href="#" class="pagination-list__item-arrow"><img class="pagination-list__item-img" src="svg/arrow_pag-left.svg"></a>
+                    </li>
+                    <li class="pagination-list__page">
+                        <a href="#" class="pagination-list__item">1</a>
+                    </li>
+                    <li class="pagination-list__page">
+                        <a href="#" class="pagination-list__item">2</a>
+                    </li>
+                    <li class="pagination-list__page">
+                        <a href="#" class="pagination-list__item">3</a>
+                    </li>
+                    <li class="pagination-list__page">
+                        <a href="#" class="pagination-list__item">4</a>
+                    </li>
+                    <li class="pagination-list__page">
+                        <a href="#" class="pagination-list__item">5</a>
+                    </li>
+                    <li class="pagination-list__page">
+                        <a href="#" class="pagination-list__item">...</a>
+                    </li>
+                    <li class="pagination-list__arrow">
+                        <a href="#" class="pagination-list__item-arrow"><img class="pagination-list__item-img" src="svg/arrow_pag-right.svg"></a>
+                    </li>
+                </ul>
+            </div>
         </main>
         <footer class="footer">
             <div class="container__footer">

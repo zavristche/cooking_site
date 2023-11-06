@@ -1,0 +1,472 @@
+@import url(style.css);
+
+.eat-power{
+    position: absolute;
+    right: 20rem;
+    left: 60rem;
+    z-index: 1;
+  }
+/*Привествие*/
+.hello {
+    display: flex;
+    height: 40rem;
+    background-image: url(../jpg/borstch_pc.jpg);
+  }
+  
+  .hello__content{
+    display: flex;
+    flex-direction: column;
+    width: 37rem;
+    height: 17rem;
+    /* margin:  */
+    margin: 10% 0 0 8rem;
+  }
+  
+  .hello__site-name{
+    color:#F6E9D6;
+    font-size: 4rem;
+    margin: 0;
+  }
+  
+  .hello__welcome{
+    color:#F6E9D6;
+    font-size: 2.5rem;
+    font-family: "Podkova Regular", sans-serif;
+    margin: 0;
+  }
+  
+  .hello__desc{
+    color:#F6E9D6;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    font-family: "Podkova Regular", sans-serif;
+    margin: 0;
+  }
+  
+  .hello__desc-b{
+    color: #F39F0F;
+    text-decoration: underline;
+  }
+  
+  /*Кнопки*/
+  .hello__buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 32rem;
+    height: 4rem;
+    margin-top: 4rem;
+  }
+  
+  .hello-button{
+    background: #F39F0F;
+  }
+  
+  .main-first-button{
+    background: #1D6829;
+    margin: 0 9rem;
+  }
+  
+  
+  /*main*/
+  .main-first{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 8rem;
+  }
+  
+  
+  .main-first__chapter{
+    font-size: 2.5rem;
+  }
+  
+  .main-first__nav {
+    display: flex;
+    flex-wrap: wrap;
+    width:auto;
+  }
+  
+  .main-first__nav-list{
+    display: flex;
+    height: auto;
+    padding: 0;
+  }            
+  
+  .main-first__nav-item{
+    font-family: "Podkova Regular", sans-serif;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0 1.25rem;
+    color:#311D13;
+    border-left: 1px dashed #311D13;
+    border-right: 1px dashed #311D13;
+  }
+  
+  /*Блоки контента*/
+  
+  .main-first__content{
+    display:flex;
+    margin-top: 3rem;
+    flex-wrap:wrap;
+    justify-content: space-between;
+  }
+  
+  .main-first__content article{
+    margin: 1.5rem 0;
+  }
+  
+  .recipe-modul {
+    display: flex;
+    width: 17rem; 
+    height: 18rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .compil-modul {
+    display: flex;
+    width: 34rem; 
+    height: 18rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .recipe-module__image {
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+  
+  .compil-module__image {
+    position: absolute;
+    background-size: cover;
+    width: 24rem;
+    height: 18rem;
+    z-index: -2;
+  }
+  
+  .comil-module__image-2 {
+    position: absolute;
+    background-size: cover;
+    width: 13rem;
+    height: 9rem;
+    left: 24rem;
+    z-index: -2;
+  }
+  
+  .comil-module__image-3 {
+    position: absolute;
+    background-size: cover;
+    width: 13rem;
+    height: 9rem;
+    left: 24rem;
+    bottom: 9rem;
+    z-index: -2;
+  }
+  
+  .recipe-module__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#00000000, #000000);
+    z-index: -1;
+  }
+  
+  .recipe-module__content {
+    width: auto;
+    height: 7rem;
+    color:white;
+    padding: 1.25rem;
+  }
+  
+  .recipe-block__tegs {
+    display: flex;
+    padding: 0;
+  }
+  
+  .recipe-block__tegs-item {
+    font-family: "Podkova Regular", sans-serif;
+    font-size: 0.87rem;
+    margin: 0 0.2rem;
+  }
+  
+  .recipe-block__tegs-a {
+    color:white;
+  }
+  
+  .recipe-block__chapter {
+    width: 21rem;
+    height: auto;
+    vertical-align: top;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  
+  .recipe-block__user {
+    font-size: 0.75rem;
+  }
+  
+  .main-first__buttons {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+  }
+
+  @media (max-width: 68rem) {
+    .hello {
+      display: flex;
+      height: 26.5rem;
+      background-image: url(../png/borstch_pad.png);
+    }
+  
+    .hello__content{
+      width: 26rem;
+      height: 13rem;
+      margin: 6rem 0 0 3rem;
+    }
+    .hello__site-name{
+      font-size: 3rem;
+    }
+  
+    .hello__welcome{
+      color:#F6E9D6;
+      font-size: 1.6rem;
+    }
+  
+    .hello__desc{
+      font-size: 1.125rem;
+    }
+  
+    .hello__buttons{
+      display: flex;
+      justify-content: space-between;
+      width: 22rem;
+      height: 3rem;
+      margin-top: 2.5rem;
+    }
+  
+    .main-first{
+      padding: 1rem 3rem;
+    }
+  
+    .main-first__chapter{
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .main-first__nav-item{
+      font-size: 1rem;
+      border-left: 1px dashed #311D13;
+      border-right: 1px dashed #311D13;
+    }
+  
+    .main-first__content{
+      margin-top: 1rem;
+    }
+  
+    .recipe-modul {
+      width: 14rem; 
+      height: 15rem;
+    }
+  
+    .compil-modul {
+      width: 28rem; 
+      height: 15rem;
+    }
+  
+    .compil-module__image {
+      width: 20rem;
+      height: 15rem;
+    }
+    
+    .comil-module__image-2 {
+      position: absolute;
+      background-size: cover;
+      width: 10rem;
+      height: 7.5rem;
+      left: 20rem;
+      z-index: -2;
+    }
+    
+    .comil-module__image-3 {
+      position: absolute;
+      background-size: cover;
+      width: 10rem;
+      height: 7.5rem;
+      left: 20rem;
+      bottom: 7.5rem;
+      z-index: -2;
+    }
+  
+    .recipe-module__content {
+      width: auto;
+      height: 5rem;
+      color:white;
+    }
+  
+    .recipe-block__tegs {
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .recipe-block__tegs-item {
+      font-size: 0.6rem;
+      margin: 0 0.2rem;
+    }
+  
+    .recipe-block__chapter {
+      width: 12rem;
+      font-size: 2rem;
+    }
+  
+    .main-first__buttons {
+      margin: 1rem 0;
+    }
+  }
+  
+  @media (max-width: 20rem) {
+    
+    .hello {
+      display: flex;
+      height: 13rem;
+      background-image: url(../png/borstch_mob.png);
+    }
+  
+    .hello__content{
+      width: 26rem;
+      height: 13rem;
+      margin: 4rem 0 0 1.25rem;
+    }
+    .hello__site-name{
+      font-size: 1.125rem;
+      margin-bottom: 0.3rem;
+    }
+  
+    .hello__welcome{
+      font-size: 0.75rem;
+      margin-bottom: 0.3rem;
+    }
+  
+    .hello__desc{
+      width:9.5rem;
+      font-size: 0.5rem;
+    }
+  
+    .hello__buttons{
+      display: flex;
+      justify-content: space-between;
+      width: 11rem;
+      margin-top: 1rem;
+    }
+  
+    .main-first{
+      padding: 1rem 1.25rem;
+    }
+  
+    .main-first__chapter{
+      font-size: 1rem;
+      margin: 0;
+    }
+  
+    .main-first__nav{
+      border-bottom: 1px dashed #311D13;
+      height: 2rem;
+    }
+  
+    .main-first__nav-item{
+      font-size: 0.5rem;
+      border: none;
+      padding: 0 0.25rem;
+    }
+  
+    .main-first__content{
+      margin-top: 1rem;
+    }
+  
+    .main-first__content article{
+      margin: 1rem 0;
+    }
+  
+    #item-4 {
+      order: 1;
+    }
+    #item-7 {
+      order: 1;
+    }
+  
+    #item-11 {
+      order: 1;
+    }
+  
+    #item-13 {
+      order: 1;
+    }
+  
+    .recipe-modul {
+      width: 8rem; 
+      height: 8rem;
+      border-radius: 0.7rem;
+    }
+  
+    .compil-modul {
+      width: 17.5rem; 
+      height: 8rem;
+      border-radius: 0.7rem;
+    }
+  
+    .compil-module__image {
+      width: 11rem;
+      height: 8rem;
+    }
+    
+    .comil-module__image-2 {
+      width: 7rem;
+      height: 4rem;
+      left: 11rem;
+    }
+    
+    .comil-module__image-3 {
+      width: 7rem;
+      height: 4rem;
+      left: 11rem;
+      bottom: 4rem;
+    }
+  
+    .recipe-module__content {
+      width: auto;
+      height: 4rem;
+      padding: 0.6rem;
+    }
+  
+    .recipe-block__tegs-item {
+      font-size: 0.4rem;
+      margin: 0 0.1rem;
+    }
+  
+    h3 {
+      font-size: 0.7rem;
+      margin-top: 0.5rem;
+    }
+  
+    .recipe-block__user {
+      font-size: 0.4rem;
+      margin-top: 1.2rem;
+    }
+  
+    .main-first__buttons {
+      margin: 0.5rem 0;
+    }
+  
+    .main-first-button{
+      background: #1D6829;
+      margin: 0 0.8rem;
+    }
+}
