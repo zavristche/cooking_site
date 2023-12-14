@@ -39,6 +39,7 @@
     background-size: contain;
     margin: 0 0.5rem;
     transition: 0.3s;
+    cursor: pointer;
   }
   
   .footer__social-item:hover {

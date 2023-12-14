@@ -8,10 +8,6 @@
     <title>Крутая яичница</title>
 
     <meta name="description" content="Ищи новые рецепты, сохраняй их в свою книгу и делись своими шедеврами с другими пользователями!"> 
-    <!--Уникальное описание страницы. Используется парсерами URL-адресов в социальных сетях, таких как Twitter или Facebook.-->
-    <meta property="og:title" content="Unique page title - My Site">
-    <!--Изображение, отображаемое, когда вы делитесь ссылкой на страницу в социальных сетях, приложениях чата или других сайтах, которые очищают URL-адреса.-->
-    <meta property="og:image" content="image.jpg">
     <meta name="theme-color" content="#311D13">
     <link rel="stylesheet" href="css/recept-page.css">
 </head>
@@ -19,11 +15,9 @@
     <div class="container">
         <header class="header">
             <div class="container__header">
-                <a href="index.html">
-                    <svg class="header__logo">
-                        <use href="svg/sprite.svg#logo"></use>
-                    </svg>
-                </a>
+                <svg class="header__logo" onclick="location.href= ('index.html');">
+                    <use href="svg/sprite.svg#logo"></use>
+                </svg>
                 <div class="header__search">
                     <form class="search-form">
                         <div class="search-form__content">
@@ -412,8 +406,12 @@
                         <li class="footer__info-item">Дизайн: Вкусножуйкин</li>
                     </ul>
                     <ul class="footer__social">
-                        <a href="#" class="footer__social-item" style="background-image: url(../svg/VK.svg);"></a>
-                        <a href="#" class="footer__social-item" style="background-image: url(../svg/TG.svg);"></a>  
+                        <svg class="footer__social-item">
+                            <use href="svg/sprite.svg#tg"></use>
+                        </svg>
+                        <svg class="footer__social-item">
+                            <use href="svg/sprite.svg#vk"></use>
+                        </svg>
                     </ul>
                 </div>
                 <p class="footer__copyright">ААА “ВКУСНОЖУЙ.РУ”, 2077. ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
