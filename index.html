@@ -13,15 +13,19 @@
     <meta property="og:image" content="image.jpg">
     <meta name="theme-color" content="#311D13">
     <link rel="stylesheet" href="css/first-page.css">
+    <link rel="stylesheet" href="animate.css-main/animate.min.css" />
 </head>
 <body>
-    <!-- <div class="container-power">
-        <img src="png/borstch_pc.png" class="eat-power" alt="Борщ">
-    </div> -->
+    <div class="container-power">
+        <div class="eat-power" alt="Борщ"></div>
+    </div>
     <div class="container">
+        <div class="container-product">
+            <div class="product-power"></div>
+        </div>
         <header class="header">
             <div class="container__header">
-                <a href="#" class="header__logo" style="background-image: url(../svg/logo.svg);"></a>  
+                <a href="./index.html" class="header__logo" style="background-image: url(../svg/logo.svg);"></a>  
                 <div class="header__search">
                     <form class="search-form">
                         <div class="search-form__content">
@@ -33,13 +37,13 @@
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="#"><img class="header__nav-item-img" src="svg/plus.svg" alt="Записать новый рецепт"></a>
+                            <a href="./form-recept.html"><img class="header__nav-item-img" src="svg/plus.svg" alt="Записать новый рецепт"></a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="#"><img class="header__nav-item-img" src="svg/heart.svg" alt="Моя книга рецептов"></a>
+                            <a href="./search.html"><img class="header__nav-item-img" src="svg/heart.svg" alt="Моя книга рецептов"></a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="#"><img class="header__nav-item-img" src="svg/user.svg" alt="Моя страница"></a>
+                            <a href="./blog.html"><img class="header__nav-item-img" src="svg/user.svg" alt="Моя страница"></a>
                         </li>
                     </ul>
                 </nav>
@@ -47,7 +51,7 @@
         </header>
         <article class="hello">
             <div class="hello__content">
-                <h1 class="hello__site-name">Вкусножуй</h1>
+                <a href="index.html"><h1 class="hello__site-name">Вкусножуй</h1></a>
                 <p class="hello__welcome">Добро пожаловать, Гость!</p>
                 <p class="hello__desc">
                     <b class="hello__desc-b">Ищи</b> новые рецепты, <b class="hello__desc-b">сохраняй</b> их в 
@@ -55,36 +59,32 @@
                     другими пользователями!
                 </p>
                 <div class="hello__buttons">
-                    <form class="button-form" action="#">
-                        <button class="hello-button" type="button">Найти рецепт</button>
-                    </form>
-                    <form class="button-form" action="#">
-                    <button class="hello-button" type="button">Моя книга рецептов</button>
-                    </form>
+                    <button class="hello-button" type="button" onclick="window.location.href = 'search.html'">Найти рецепт</button>
+                    <button class="hello-button" type="button" onclick="window.location.href = 'search.html'">Моя книга рецептов</button>
                 </div>
             </div>
         </article>
         <main class="main-first">
-            <h2 class="main-first__chapter">Что приготовить?</h2>
+            <h2 class="main-first__chapter">Что приготовить</h2>
             <nav class="main-first__nav">
                 <ul class="main-first__nav-list">
                     <li class="main-first__nav-item">
-                        <a href="#">Первые блюда</a>
+                        <a class="main-first__nav-a" href="#">Первые блюда</a>
                     </li>
                     <li class="main-first__nav-item">
-                        <a href="#">Вторые блюда</a>
+                        <a class="main-first__nav-a"href="#">Вторые блюда</a>
                     </li>
                     <li class="main-first__nav-item">
-                        <a href="#">Закуски</a>
+                        <a class="main-first__nav-a" href="#">Закуски</a>
                     </li>
                     <li class="main-first__nav-item">
-                        <a href="#">Напитки</a>
+                        <a class="main-first__nav-a" href="#">Напитки</a>
                     </li>
                     <li class="main-first__nav-item">
-                        <a href="#">Салаты</a>
+                        <a class="main-first__nav-a" href="#">Салаты</a>
                     </li>
                     <li class="main-first__nav-item">
-                        <a href="#">Выпечка</a>
+                        <a class="main-first__nav-a" href="#">Выпечка</a>
                     </li>
                 </ul>
             </nav>
@@ -457,6 +457,7 @@
             </div>
             <p class="footer__copyright">ААА “ВКУСНОЖУЙ.РУ”, 2077. ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
         </footer>
-    </div> 
+    </div>
+    <script defer src="js/first-page.js"></script>
 </body>
 </html>

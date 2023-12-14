@@ -1,26 +1,58 @@
+@import url(../animate.css-main/animate.css);
+
 body {
     background-image: url(../jpg/background.jpg);
     background-repeat: repeat;
 }
+
+body::-webkit-scrollbar {
+    width: 1rem;        
+}
+
+body::-webkit-scrollbar-track {
+    background: #F6E9D6;      
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #837053;
+    border-radius: 0.5rem;
+}
+
+  textarea::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  textarea::-webkit-scrollbar-thumb {
+    background-color: #837053;
+    border-radius: 0.5rem;
+  }
+
+  textarea::-webkit-input-placeholder {
+    color: #837053;
+}
+
+
+
 .container {
     width: 90rem;
     display: flex;
     flex-direction: column;
     justify-self: center;
-    /* align-items: center; */
     margin: auto;
+    animation:fadeIn 1s;
 }
 
-.container-power {
-    position: relative;
-    width: 109.125rem;
+.circle {
     display: flex;
-    flex-direction: column;
-    justify-self: center;
     align-items: center;
-    margin: auto;
-    padding: auto;
+    justify-content: center;
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
+    overflow: hidden;
 }
+
 ul li {
     list-style: none;
     padding: 0;
@@ -36,6 +68,11 @@ input {
     border: none;
 }
 
+textarea {
+    outline: none;
+    border: none;
+}
+
 button {
     display: flex;
     align-items: center;
@@ -47,6 +84,13 @@ button {
     font-size: 1.25rem;
     border-radius: 1rem;
     padding: 1.4rem 2.4rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background: rgb(240, 130, 27);
+    transition: 0.3s;
+    animation: pulse 0.3s;
 }
 
 select {
@@ -63,10 +107,10 @@ select {
     appearance: none;
 }
 
-  select option:checked {
+select option:checked {
     color: #F6E9D6;
     background-color: #655132;
-  }
+}
 
 ::placeholder {
     color:#655132;
@@ -74,6 +118,23 @@ select {
 
 ::selection {
     background: #f8c66e;
+}
+
+dialog {
+    color: #311D13; 
+    border: none;
+    background-color: #F6E9D6;
+    border-radius: 1rem;
+    box-shadow: 
+        2px 2px 7px 0px rgba(0, 0, 0, 0.10), 
+        7px 10px 12px 0px rgba(0, 0, 0, 0.09), 
+        16px 22px 17px 0px rgba(0, 0, 0, 0.05), 
+        29px 40px 20px 0px rgba(0, 0, 0, 0.01), 
+        45px 62px 21px 0px rgba(0, 0, 0, 0.00);
+}
+
+dialog select {
+    background-color: #F2DBBA;
 }
 
 @media (max-width: 68rem) {
@@ -85,11 +146,20 @@ select {
       font-size: 0.9rem;
       padding: 1rem 1.4rem;
     }
+
+    body::-webkit-scrollbar {
+        width: 0.6rem;        
+    }
+    
 }
 
 @media (max-width: 20rem) {
     .container {
         width: 20rem;
+    }
+
+    body::-webkit-scrollbar {
+        width: 0.4rem;        
     }
     
     button {
@@ -103,5 +173,10 @@ select {
         border-radius: 0.5rem;
         font-size: 0.5rem;
         padding: 0.4rem 0.8rem;
+    }
+
+    .circle {
+        width: 2rem;
+        height: 2rem;
     }
 }

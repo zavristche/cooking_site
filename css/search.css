@@ -1,5 +1,340 @@
 @import url(style.css);
-@import url(first-page.css);
+/* Модальное окно */
+.overlay-modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+
+.overlay-modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-filter {
+    display: flex;
+    width: 52.5rem;
+    flex-direction: column;
+    margin-top: 7rem;
+    transform: scale(0.9);
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 1.3rem 3rem 3rem 4.4rem;
+    transform: scale(0.9);
+}
+
+.modal-filter::-webkit-scrollbar {
+    display: none;
+}
+
+.overlay-modal.open .modal-filter {
+    transform: scale(1);
+    transition: transform .8s;
+}
+
+.modal-filter__content-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-head__title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    font-family: "Podkova Regular", sans-serif;
+}
+
+.content-head__close {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    background-color: #1D6829;
+    border-radius: 100%;
+    width: 3.125rem;
+    height: 3.125rem;
+    padding: 0;
+}
+
+.content-head__close:hover {
+  background-color: #0f521c;
+}
+
+.content-head__close-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    transform: rotate(45deg);
+    transform-origin: center center;
+}
+
+.modal-filter__content-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: auto;
+}
+
+.content-filters__filter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.modal-filter__search-form{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 2rem;
+}
+
+.content-button__button{
+    background-color: #1D6829;
+    padding: 1.3rem 3.2rem;
+    font-size: 1.25rem;
+}
+
+.content-button__button:hover {
+    background-color: #0f521c;
+  }
+
+.filter__head {
+    display: flex;
+    width: 21rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.filter__span {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    background-color: #1D6829;
+    border-radius: 100%;
+    width: 3.125rem;
+    height: 3.125rem;
+    padding: 0;
+}
+
+.filter__icon {
+    width: 1.9rem;
+    height: 1.9rem;
+}
+.filter__title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: "Podkova Regular", sans-serif;
+    margin-left: 0.9rem;
+}
+
+/* Бюджет и время */
+.input-select-form {
+    display: flex;
+    justify-content: center;
+    width: 23rem;
+}
+
+.filter__input {
+    width: 5rem;
+    height: 2rem;
+    border-radius: 1rem;
+    color: #311D13; 
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    background: #F2DBBA;
+    margin: 0 0.3rem;
+}
+
+.filter__input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.filter__select {
+    width: 8rem;
+    margin: 0 0.3rem;
+}
+
+/* Сложность */
+.cook-form {
+    display: flex;
+    justify-content: center;
+    width: 23rem;
+}
+
+.filter__cook-level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0.3rem;
+}
+
+.cook-level__button:focus,
+.cook-level__button:hover{
+    background-color: #1D6829;
+}
+
+.cook-level__button {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    background-color: #655132;
+    border-radius: 100%;
+    width: 2.7rem;
+    height: 2.7rem;
+    padding: 0;
+}
+
+.cook-level__button-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.cook-level__value {
+    font-family: "Podkova Regular", sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 0.2rem
+}
+
+/* Прием пищи/тип блюда*/
+.teglist-form__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 23rem;
+    padding: 0;
+}
+
+.teglist-form__button {
+    background-color: #F2DBBA;
+    color: #655132;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.7rem;
+    margin: 0 0.4rem 0.7rem 0.4rem;
+    transition: 0.3s;
+}
+
+.teglist-form__button:focus,
+.teglist-form__button:active,
+.teglist-form__button:hover{
+    background-color: #655132;
+    color: white;
+}
+
+/* Поиск тегов */
+#products,
+#cook,
+#holiday {
+    width: 24rem;
+}
+
+.filter__subtitle {
+    font-weight: bold;
+}
+
+.search-select__input {
+    width: 23rem;
+    border-radius: 0.6rem;
+    color: #311D13; 
+    font-size: 1rem;
+    padding: 1.25rem;
+    background: #F2DBBA;
+    margin: 0.5rem 0;
+}
+
+.search-select__list {
+    flex-direction: column;
+    width: 25.5rem;
+    height: auto;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 1;
+    padding: 0;
+    background: #F6E9D6;
+    border-radius: 0.6rem;
+    box-shadow: 
+    10px 9px 13px 0px rgba(66, 66, 66, 0.17), 
+    10px 20px 18px 0px rgba(197, 197, 197, 0.1);
+}
+
+.search-select__list::-webkit-scrollbar {
+    width: 1rem;        
+}
+
+.search-select__list::-webkit-scrollbar-track {
+    background: #F6E9D6;
+    border-radius: 0.6rem;      
+}
+
+.search-select__list::-webkit-scrollbar-thumb {
+    background-color: #837053;
+    border-radius: 0.6rem;
+}
+
+.search-select__list-item {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.search-teg__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 0.8rem;
+    width: 100%;
+}
+
+.search-teg__teg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
+    background: #655132;
+    border-radius: 0.5rem;
+    margin: 0 0.4rem 0.8rem 0.4rem;
+    animation: fadeIn 0.4s;
+    transition: 0.3s;
+}
+
+.search-teg__teg:hover {
+    transform: scale(1.1);
+}
+
+.teg__lable {
+    color: white;
+    margin-right: 0.5rem;
+}
+
+.teg__delete {
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    background-color: #311D13;
+    border-radius: 100%;
+    width: 1.7rem;
+    height: 1.7rem;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.teg__delete-icon {
+    width: 1rem;
+    height: 1rem;
+    transform: rotate(45deg);
+    transform-origin: center center;
+}
+
 /* Поиск с фильтрами */
 .search-menu {
     display: flex;
@@ -14,7 +349,6 @@
   
 .search-menu__content {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     width: 52rem;
     margin-top: 10rem;
@@ -35,12 +369,13 @@
 .search-menu__button-find{
     background: #F39F0F;
     font-size: 1.125rem;
+    height: 3rem;
 }
 
 .search-menu__filter {
     margin-top: -1rem;
 }
-.search-menu__filter-button{
+.search-menu__filter-button {
     display: flex;
     justify-content: space-evenly;
     justify-items: center;
@@ -88,6 +423,26 @@
     font-family: "Fira Sans Regular";
     font-size: 1.125rem;
     padding: 0.6rem 1.3rem;
+    transition: 0.5s;
+}
+
+.search-menu__button-material:hover {
+    background:#F2DBBA;
+}
+
+.search-menu__button-material:focus { 
+    background:#F39F0F;
+    color: white;
+    transition: color 0s 
+}
+
+.search-menu__select {
+    width: 14rem;
+    transition: 0.5s;
+}
+
+.search-menu__select:hover {
+    background-color:#F2DBBA;
 }
 
 /* main */
@@ -129,6 +484,12 @@
     height: 3rem;
     background: #1D6829;
     border-radius: 1rem;
+    transition: 0.3s;
+}
+
+.pagination-list__page:hover {
+    background: #0f521c;
+    transform: scale(1.1);
 }
 
 .pagination-list__item {
@@ -143,6 +504,12 @@
     height: 3rem;
     background: #655132;
     border-radius: 1rem;
+    transition: 0.3s;
+}
+
+.pagination-list__arrow:hover {
+    background: #311D13;
+    transform: scale(1.1);
 }
 
 .pagination-list__item-arrow  {
@@ -173,8 +540,135 @@
 }
 
 @media (max-width: 20rem) {
+    .modal-filter {
+        flex-direction: column;
+        padding: 1.25rem;
+        margin-top: 4rem;
+        width: 17.5rem;
+    }
+
+    .content-head__title {
+        font-size: 1.7rem;
+        margin: 0;
+    }
+
+    .content-head__close {
+        border-radius: 100%;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0;
+    }
+
+    .content-button__button{
+        padding: 1rem 2.6rem;
+        border-radius: 1rem;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .content-head__close-icon {
+        width: 1.4rem;
+        height: 1.4rem;
+        transform: rotate(45deg);
+        transform-origin: center center;
+    }
+
+    .modal-filter__content-filters {
+        margin-top: 1.5rem;
+        width: 17.5rem;
+    }
+
+    .filter__head {
+        width: 100%;
+    }
+    
+    .filter__title {
+        font-size: 1.1rem;
+        margin-left: 0.7rem;
+    }
+
+    .input-select-form {
+        width: auto;
+        margin-top: 0.2rem;
+    }
+
+    .filter__input {
+        width: 4rem;
+        height: 1.5rem;
+        border-radius: 0.6rem;
+        font-size: 0.8rem;
+        padding: 0.3rem 0.7rem;
+        margin: 0 0.2rem;
+    }
+
+    .filter__select {
+        width: 6rem;
+        font-size: 0.8rem;
+        margin: 0 0.3rem;
+    }
+
+    .cook-form {
+        display: flex;
+        justify-content: center;
+        width: 17.5rem;
+    }
+
+    .teglist-form__list {
+        width: 17.5rem;
+    }
+
+    #products,
+    #cook,
+    #holiday {
+        width: 17.5rem;
+    }
+
+    .filter__subtitle {
+        margin: 0.5rem 0;
+        font-weight: bold;
+    }
+    
+    .search-select__input {
+        width: 15rem;
+        border-radius: 0.6rem;
+        color: #311D13; 
+        font-size: 1rem;
+        padding: 1rem;
+        background: #F2DBBA;
+        margin: 0.5rem 0;
+    }
+
+    .search-select__list {
+        width: 17rem;
+        margin-top: -0.4rem;
+    }
+
+    .search-select__list-item {
+        padding: 0.6rem 0.8rem;
+        cursor: pointer;
+    }
+
+    .search-teg__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    .search-teg__teg {
+        padding: 0.4rem 0.5rem;
+    }
+
+    .teg__lable {
+        margin-right: 0.3rem;
+    }
+
+
+
     .search-menu {
-        height: 17rem;
+        height: 19rem;
     }
 
     .search-menu__content {
@@ -193,6 +687,7 @@
     }
 
     .search-menu__button-find {
+        height: 1.6rem;
         font-size: 0.5rem;
         padding: 0.5rem 0.7rem;
     }
@@ -203,7 +698,6 @@
 
     .search-menu__filter-button {
         padding: 0.4rem 0.75rem;
-        margin-bottom: em;
     }
 
     .search-menu__filter-item {
@@ -217,7 +711,7 @@
     }
 
     .search-menu__type {
-        margin-top: 0.6rem;
+        margin-top: 1.2rem;
     }
 
     .search-menu__type-chapter {
@@ -234,6 +728,10 @@
     .search-menu__button-material {
         font-size: 0.5rem;
         padding: 0.4rem 1rem;
+    }
+
+    .search-menu__select {
+        width: 8rem;
     }
 
     .main-search{

@@ -15,11 +15,11 @@
     <meta name="theme-color" content="#311D13">
     <link rel="stylesheet" href="css/recept-page.css">
 </head>
-<body>
+<body ng-controller = "testCtrl">
     <div class="container">
         <header class="header">
             <div class="container__header">
-                <a href="#" class="header__logo" style="background-image: url(../svg/logo.svg);"></a>  
+                <a href="./index.html" class="header__logo" style="background-image: url(../svg/logo.svg);"></a>  
                 <div class="header__search">
                     <form class="search-form">
                         <div class="search-form__content">
@@ -31,43 +31,412 @@
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
-                            <a href="#"><img class="header__nav-item-img" src="svg/plus.svg" alt="Записать новый рецепт"></a>
+                            <a href="./form-recept.html"><img class="header__nav-item-img" src="svg/plus.svg" alt="Записать новый рецепт"></a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="#"><img class="header__nav-item-img" src="svg/heart.svg" alt="Моя книга рецептов"></a>
+                            <a href="./search.html"><img class="header__nav-item-img" src="svg/heart.svg" alt="Моя книга рецептов"></a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="#"><img class="header__nav-item-img" src="svg/user.svg" alt="Моя страница"></a>
+                            <a href="./blog.html"><img class="header__nav-item-img" src="svg/user.svg" alt="Моя страница"></a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
         <main class="main-recept">
-            <section class="main-recept__preview-rec">
-                <div class="preview-rec__overlay"></div>
-                <div class="preview-rec__image" style="background-image: url(jpg/preview/1.jpg);"></div>
-                <div class="preview-rec__content">
-                    <div class="preview-rec__content-user">
-                        <a href="#"><img class="preview-rec__content-user-img" src="jpg/avatar-grand.jpg" alt="Бабуля на мотобайке">Бабуля на мотобайке</a>
+            <section class="main-recept__preview">
+                <div class="main-recept__preview-overlay"></div>
+                <div class="main-recept__preview-image" style="background-image: url(jpg/recipe/preview.jpeg);"></div>
+                <div class="main-recept__preview-content">
+                    <div class="preview-content__user">
+                        <a href="#">
+                            <div class="circle">
+                                <div class="preview-content__user-img" style="background-image: url(jpg/avatar-grand.jpg);"></div>
+                            </div>
+                        </a>
+                        <a href="#" class="preview-content__user-name">Бабуля на мотобайке</a>
                     </div>
-                    <h1 class="preview-rec__content-chapter">Крутая яичница</h1>
+                    <a href="recept-page.html" style="color: white"><h1 class="preview-content__chapter">Крутая яичница</h1></a>
                 </div>
             </section>
-        </main>
-        <footer class="footer">
-            <div class="container__footer">
-                <ul class="footer__info">
-                    <li class="footer__info-item">Email: info@vkusnozhui.ru</li>
-                    <li class="footer__info-item">Дизайн: Вкусножуйкин</li>
-                </ul>
-                <ul class="footer__social">
-                    <a href="#" class="footer__social-item" style="background-image: url(../svg/VK.svg);"></a>
-                    <a href="#" class="footer__social-item" style="background-image: url(../svg/TG.svg);"></a>  
-                </ul>
+            <section class="main-recept__desc">
+                <p class="main-recept__desc-text">
+                    Этот рецепт "Крутая яичница" будет твоим уверенным шагом на пути к повышению своей кулинарной репутации! Знакомься с яйцами, которые заслуживают громкого аплодисментов и неистовых восторженных возгласов. Вмешай их в жаркую сковороду, где они проявят свою великолепную текстуру и изысканный вкус. Хрустящий бекон подарит дерзкую нотку соли, а свежие зелень и специи добавят особенной пикантности. Желтки, идеально зажаренные, словно солнышко на небе, позволят насладиться каждым кусочком. Готова ли ты окунуться в мир яичницы, которая станет твоим оружием для завоевания сердец и гурманских вкусовых рецепторов? Тогда приступай к приготовлению этой крутой яичницы прямо сейчас!
+                </p>
+            </section>
+            <section class="main-recept__info">
+                <div class="main-recept__info-features">
+                    <ul class="info-features__list">
+                        <li class="info-features__list-item">
+                            <span class="list-item__span">
+                                <svg class="list-item__icon">
+                                    <use href="svg/sprite.svg#time"></use>
+                                </svg>
+                            </span>
+                            <p class="list-item__name">Приготовится за: 10 мин</p>
+                        </li>
+                        <li class="info-features__list-item">
+                            <span class="list-item__span">
+                                <svg class="list-item__icon">
+                                    <use href="svg/sprite.svg#cook"></use>
+                                </svg>
+                            </span>
+                            <p class="list-item__name">Сложность:</p>
+                            <div class="list-item__complex">
+                                <span class="list-item__complex-span">
+                                    <svg class="list-item__complex-icon">
+                                        <use href="svg/sprite.svg#cook"></use>
+                                    </svg>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="info-features__list-item">
+                            <span class="list-item__span">
+                                <svg class="list-item__icon">
+                                    <use href="svg/sprite.svg#money"></use>
+                                </svg>
+                            </span>
+                            <p class="list-item__name">Бюджет продуктов: Не указан</p>
+                        </li>
+                        <li class="info-features__list-item">
+                            <span class="list-item__span">
+                                <svg class="list-item__icon">
+                                    <use href="svg/sprite.svg#flag"></use>
+                                </svg>
+                            </span>
+                            <p class="list-item__name">Кухня мира: Не указана</p>
+                        </li>
+                        <li class="info-features__list-item">
+                            <span class="list-item__span">
+                                <svg class="list-item__icon">
+                                    <use href="svg/sprite.svg#tag"></use>
+                                </svg>
+                            </span>
+                            <p class="list-item__name">Метки:</p>
+                        </li>
+                        <li class="list-item__tegs">
+                            <a href="search.html"><span class="list-item__tegs-item">Яйцо</span></a>
+                            <a href="search.html"><span class="list-item__tegs-item">Завтрак</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-recept__info-ingredients">
+                    <div class="info-ingredients__portions">
+                        <p class="info-ingredients__portions-chapter">Количество порций:</p>
+                        <div class="info-ingredients__portions-form">
+                            <input class="portions-form__input" id="input-portions" type="number" min="1" value="3">
+                            <div class="portions-form__buttons">
+                                <button class="portions-form__button" id="btn-pluse">
+                                    <svg class="portions-form__button-icon">
+                                        <use href="svg/sprite.svg#pluse"></use>
+                                    </svg>
+                                </button>
+                                <button class="portions-form__button" id="btn-minuse" >
+                                    <svg class="portions-form__button-icon">
+                                        <use href="svg/sprite.svg#minuse"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-ingredients__ingred">
+                        <p class="info-ingredients__ingred-chapter">Ингредиенты:</p> 
+                        <div class="info-ingredients__checkboxes">
+                            <label class="checkboxes__label">
+                                <input class="hidden-checkbox" type="checkbox">
+                                <div class="checkbox">
+                                    <svg class="checkmark" viewBox="0 0 23 23">
+                                        <use href="svg/sprite.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <span class="checkbox__item-name">Яйцо</span>
+                                <span class="checkbox__item-value" type="number">3</span>
+                                <span class="checkbox__item-value-type">шт</span>
+                            </label>
+                            <label class="checkboxes__label">
+                                <input class="hidden-checkbox" type="checkbox">
+                                <div class="checkbox">
+                                    <svg class="checkmark" viewBox="0 0 23 23">
+                                        <use href="svg/sprite.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <span class="checkbox__item-name">Сливочное масло</span>
+                                <span class="checkbox__item-value" type="number">25</span>
+                                <span class="checkbox__item-value-type">гр</span>
+                            </label>
+                            <label class="checkboxes__label">
+                                <input class="hidden-checkbox" type="checkbox">
+                                <div class="checkbox">
+                                    <svg class="checkmark" viewBox="0 0 23 23">
+                                        <use href="svg/sprite.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <span class="checkbox__item-name">Соль</span>
+                                <span class="checkbox__item-value-type">по вкусу</span>
+                            </label>
+                        </div>
+                        <p class="info-ingredients__ingred-chapter">Украшение:</p> 
+                        <div class="info-ingredients__checkboxes">
+                            <label class="checkboxes__label">
+                                <input class="hidden-checkbox" type="checkbox">
+                                <div class="checkbox">
+                                    <svg class="checkmark" viewBox="0 0 23 23">
+                                        <use href="svg/sprite.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <span class="checkbox__item-name">Хлеб</span>
+                                <span class="checkbox__item-value" type="number">60</span>
+                                <span class="checkbox__item-value-type">гр</span>
+                            </label>
+                            <label class="checkboxes__label">
+                                <input class="hidden-checkbox" type="checkbox">
+                                <div class="checkbox">
+                                    <svg class="checkmark" viewBox="0 0 23 23">
+                                        <use href="svg/sprite.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <span class="checkbox__item-name">Помидоры черри</span>
+                                <span class="checkbox__item-value" type="number">50</span>
+                                <span class="checkbox__item-value-type">гр</span>
+                            </label>
+                            <label class="checkboxes__label">
+                                <input class="hidden-checkbox" type="checkbox">
+                                <div class="checkbox">
+                                    <svg class="checkmark" viewBox="0 0 23 23">
+                                        <use href="svg/sprite.svg#checkmark"></use>
+                                    </svg>
+                                </div>
+                                <span class="checkbox__item-name">Петрушка</span>
+                                <span class="checkbox__item-value-type">по вкусу</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="main-recept__steps">
+                <article class="recept-step">
+                    <img class="recept-step__img" src="jpg/recipe/1.jpg" alt="Шаг 1">
+                    <p class="recept-step__title">1. Приготовь ингредиенты</p>
+                    <p class="recept-step__desc">
+                        Возьми 2-3 яйца и разбей их в миску. Добавь щепотку соли и перца по вкусу. При желании, можно добавить мелко нарезанные зелень 
+                        или овощи, такие как лук или помидоры.
+                    </p>
+                </article>
+                <article class="recept-step">
+                    <img class="recept-step__img" src="jpg/recipe/2.jpg" alt="Шаг 2">
+                    <p class="recept-step__title">2. Растопи масло на сковороде</p>
+                    <p class="recept-step__desc">
+                        Разогрей сковороду на среднем огне. Добавьте небольшое количество масла или масла растительного происхождения 
+                        и распределите его по всей поверхности сковороды.
+                    </p>
+                </article>
+                <article class="recept-step">
+                    <img class="recept-step__img" src="jpg/recipe/3.jpg" alt="Шаг 3">
+                    <p class="recept-step__title">3. Доведи до готовности</p>
+                    <p class="recept-step__desc">
+                        Когда масло нагреется, аккуратно вылей смесь яиц в центр сковороды.
+                        Используй вилку или лопатку для перемешивания яиц, разрывая желтки и перемешивая их со свежими белками.
+                        При помощи лопатки аккуратно перемешивай смесь яиц, чтобы они равномерно прогревались со всех сторон и 
+                        не сгорели. Готовь яичницу до тех пор, пока она не достигнет желаемой степени готовности. Если предпочитаешь
+                        более твердую яичницу, готовьте ее немного дольше.
+                    </p>
+                </article>
+                <article class="recept-step">
+                    <img class="recept-step__img" src="jpg/recipe/4.jpg" alt="Шаг 4">
+                    <p class="recept-step__title">4. Кушай не обляпайся</p>
+                    <p class="recept-step__desc">
+                        Когда яичница готова, аккуратно переложи ее на тарелку.
+                        При желании, можно украсить яичницу зеленью или свежими овощами.
+                        Подай горячую яичницу с хлебом или другими гарнирами по выбору.
+                    </p>
+                </article>
+            </section>
+            <div class="main-recept__social-block">
+                <div class="rating" data-total-value="4">
+                    <div class="rating__item" data-item-value="5">★</div>
+                    <div class="rating__item" data-item-value="4">★</div>
+                    <div class="rating__item" data-item-value="3">★</div>
+                    <div class="rating__item" data-item-value="2">★</div>
+                    <div class="rating__item" data-item-value="1">★</div>
+                </div>
+                <div class="social-block__buttons">
+                    <div class="social-block__buttons-save" action="#">
+                        <button class="social-block__button" id="btn-save" type="button" onclick="showModal('modal-save')">Сохранить</button>
+                        <dialog class="modal-save" id="modal-save">
+                            <form class="save-form">
+                                <div class="modal-save__head">
+                                    <p class="modal-save__head-title">Сохранение</p>
+                                    <button class="modal-save__head-close" id="close-modal" onclick="closeModal('modal-save')" type="button">
+                                        <svg class="close__icon">
+                                            <use href="svg/sprite.svg#close"></use>
+                                        </svg>                            
+                                    </button>
+                                </div>
+                                <input type="text" class="modal-save__head-input" placeholder="Поиск подборок">
+                                <ul class="modal-save__list">
+                                    <li class="modal-save__list-item">
+                                        <div class="modal-save__compilate">
+                                            <div class="modal-save__compilate-preview" style="background-image: url(/jpg/preview/compil-preview.jpg);"></div>
+                                            <p class="modal-save__compilate-title">Салатики разные на каждый день</p>
+                                        </div>
+                                    </li>
+                                    <li class="modal-save__list-item">
+                                        <div class="modal-save__compilate">
+                                            <div class="modal-save__compilate-preview" style="background-image: url(/jpg/preview/compil-preview.jpg);"></div>
+                                            <p class="modal-save__compilate-title">Салатики разные на каждый день</p>
+                                        </div>
+                                    </li>
+                                    <li class="modal-save__list-item">
+                                        <div class="modal-save__compilate">
+                                            <div class="modal-save__compilate-preview" style="background-image: url(/jpg/preview/compil-preview.jpg);"></div>
+                                            <p class="modal-save__compilate-title">Салатики разные на каждый день</p>
+                                        </div>
+                                    </li>
+                                    <li class="modal-save__list-item">
+                                        <div class="modal-save__compilate">
+                                            <div class="modal-save__compilate-preview" style="background-image: url(/jpg/preview/compil-preview.jpg);"></div>
+                                            <p class="modal-save__compilate-title">Салатики разные на каждый день</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <button class="modal-save__button" id="btn-new_compil" type="button" onclick="showModal('modal-compilate');  closeModal('modal-save')">
+                                    <svg  class="modal-save__button-item">
+                                        <use href="svg/sprite.svg#compil-pluse"></use>
+                                    </svg>
+                                    <span class="modal-save__button-libel">Создать подборку</span>
+                                </button>
+                            </form>
+                        </dialog>
+                    </div>
+                    <form class="button-form" action="#">
+                        <button class="social-block__button" type="button">Я приготовил/а</button>
+                    </form>
+                </div>
             </div>
-            <p class="footer__copyright">ААА “ВКУСНОЖУЙ.РУ”, 2077. ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
-        </footer>
-    </div> 
+        </main>
+        <div class="footer-background">
+            <section class="main-recept__comments">
+                <section class="main-recept__comments-form">
+                    <div class="comments-form__user">
+                        <a href="blog.html">
+                            <div class="circle">
+                                <div class="comments-form__user-img" style="background-image: url(jpg/avatar-jinn.jpg);"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <form class="comment-form">
+                        <textarea class="comments-form__text" placeholder="Расскажите о блюде..."></textarea>
+                        <a href="#" class="comments-form__send-button"><img class="comments-form__send-button-img" src="svg/arrow_pag-right.svg"></a>
+                    </form>
+                    <form class="picture-form">
+                        <a href="#" class="picture-form__button"><img class="picture-form__button-img" src="svg/picture.svg"></a>
+                    </form>
+                </section>
+                <article class="comment">
+                    <div class="comment__user">
+                        <a href="#">
+                            <div class="circle">
+                                <div class="comment__user-img" style="background-image: url(jpg/avatar-nast.jpg);"></div>
+                            </div>
+                        </a>
+                        <a href="#"><p class="comment__user-name">Альфастасия</p></a>
+                    </div>
+                    <div class="comment__content">
+                        <p class="comment__content-text">
+                            Этот рецепт яичницы словно становится магией - моментально превращает хмурое утро в яркий и вкусный день! 
+                            Всего лишь несколько минут и вот она - золотистая и нежная яичница, которая по главам нашего желудка 
+                            просто идеальна!
+                        </p>
+                        <div class="comment__content-img" style="background-image: url(jpg/recipe/feedback.jpeg);"></div>
+                    </div>
+                </article>
+                <article class="comment">
+                    <div class="comment__user">
+                        <a href="#">
+                            <div class="circle">
+                                <div class="comment__user-img" style="background-image: url(jpg/slav.jpg);"></div>
+                            </div>
+                        </a>
+                        <a href="#"><p class="comment__user-name">Вячиславик</p></a>
+                    </div>
+                    <div class="comment__content">
+                        <p class="comment__content-text">
+                            Я очень рад поделиться своим впечатлением от прекрасного рецепта яичницы! Этот блюдо, безусловно, 
+                            стоит выделить из толпы своей непревзойденной вкусовой гармонией и простым, но тщательно 
+                            подобранным набором ингредиентов.<br>
+                            
+                            <br>Во-первых, хочу отметить, что приготовление этой яичницы было очень простым и быстрым процессом. 
+                            Запах, который окутывал кухню, заставил меня оценить аппетитный вид этого блюда еще до его первого кусочка. 
+                            Поджаренные яйца на сковородке смогли вызвать у меня невероятное чувство голода и я с интересом наблюдал, 
+                            как бторых, очередной аспект, который меня очень порадовал, это сочетание нежного и пышного яичного 
+                            белка с жидким желтком. Вкусовая гармония этих ингредиентов позволяет ощутить все богатство и 
+                            насыщенность яичницы. Мягкая структура и нежный аромат удовлетворили мои вкусовые рецепторы 
+                            и создали неповторимое ощущение удовольствия.<br>
+                            
+                            <br>В-третьих, иной важный фактор, о котором хочу упомянуть, это возможность варьировать ингредиенты в 
+                            рецепте яичницы. Добавление мелкого нарезанного помидора, свежих трав или сыра позволяет придать этому 
+                            блюду разнообразие и уникальный вкус. Это открывает двери к бесконечным сочетаниям и экспериментам, 
+                            которые можно делать с этим простым блюдом.<br>
+                            <br>В итоге, полное наслаждение от каждого кусочка яичницы является настоящей наградой за рецепт, 
+                            который заслуживает моего восхищения. Он легко доступен и готовится быстро и просто. 
+                            Я без сомнения рекомендую этот рецепт всем любителям яичницы и тем, кто желает насладиться вкусным 
+                            и питательным завтраком или обедом.
+                        </p>
+                        <div class="comment__content-img" style="background-image: url(jpg/recipe/feedback.jpeg);"></div>
+                    </div>
+                </article>
+                <article class="comment">
+                    <div class="comment__user">
+                        <a href="#">
+                            <div class="circle">
+                                <div class="comment__user-img" style="background-image: url(jpg/avatar-grand.jpg);"></div>
+                            </div>
+                        </a>
+                        <a href="#"><p class="comment__user-name">Бабуля на мотобайке</p></a>
+                    </div>
+                    <div class="comment__content">
+                        <p class="comment__content-text">
+                            Рецепт отвратительный, но не переживайте - скоро я его удалю!!
+                        </p>
+                    </div>
+                </article>
+            </section>
+            <footer class="footer">
+                <div class="container__footer">
+                    <ul class="footer__info">
+                        <li class="footer__info-item">Email: info@vkusnozhui.ru</li>
+                        <li class="footer__info-item">Дизайн: Вкусножуйкин</li>
+                    </ul>
+                    <ul class="footer__social">
+                        <a href="#" class="footer__social-item" style="background-image: url(../svg/VK.svg);"></a>
+                        <a href="#" class="footer__social-item" style="background-image: url(../svg/TG.svg);"></a>  
+                    </ul>
+                </div>
+                <p class="footer__copyright">ААА “ВКУСНОЖУЙ.РУ”, 2077. ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
+            </footer>
+            <div class="overlay-modal" id="modal-compilate">
+                <dialog class="modal-compilate">
+                    <div class="modal-compilate__content">
+                        <div class="modal-compilate__content-head">
+                            <p class="content-head__title">Создание подборки</p>
+                            <button class="content-head__close" id="close-modal" type="button" onclick="closeModal('modal-compilate')">
+                                <svg class="content-head__close-icon">
+                                    <use href="svg/sprite.svg#close"></use>
+                                </svg>                            
+                            </button>
+                        </div>
+                        <form class="compilate-form">
+                            <p class="compilate-form__title">Название</p>
+                            <input type="text" class="compilate-form__name" placeholder="Например “Рецепты салатов”">
+                            <p class="compilate-form__title">Теги</p>
+                            <input type="text" class="compilate-form__tegs" placeholder='Например "Салатики"'>
+                            <button class="compilate-form__button">Сохранить</button>
+                        </form>
+                    </div>
+                </dialog>
+            </div>
+        </div>
+    </div>
+    <script defer src="js/recept-page.js"></script>
 </body>
 </html>

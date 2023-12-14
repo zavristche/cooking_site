@@ -3,3 +3,5 @@
 @import url(base.css);
 @import url(header.css);
 @import url(footer.css);
+@import url(modules.css);
+@import url(../animate.css-main/animate.css);

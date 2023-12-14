@@ -1,0 +1,255 @@
+@import url(style.css);
+
+/* База */
+body {
+    background-image: url(../jpg/wood.jpg);
+    background-repeat: repeat;
+}
+
+.footer {
+    color: #F6E9D6;
+}
+
+.container__footer {
+    border-top: 3px dashed #F6E9D6;
+}
+
+/* Еда сверху */
+.container-power {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-power__eat {
+    position: absolute;
+    width: 95rem;
+    height: 73rem;
+    background-image: url(../png/power-eat1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    top: 0;
+    /* left: 0; */
+}
+
+/* main */
+.main-log {
+    display: flex;
+    flex-direction: column;
+    padding: 8rem 7.5rem 2rem 7.5rem;
+    margin-bottom: 10rem;
+}
+
+.main-log__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 54rem;
+}
+
+
+/* Заголовок */
+.main-log__title {
+    color: #F6E9D6;
+    font-size: 3.5rem;
+    text-shadow: black 1px 0 10px;
+}
+
+/* Форма */
+.main-log__logging {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F6E9D6;
+    border-radius: 1rem;
+    box-shadow: 
+    2px 2px 7px 0px rgba(0, 0, 0, 0.20), 
+    10px 9px 13px 0px rgba(0, 0, 0, 0.17), 
+    22px 20px 18px 0px rgba(0, 0, 0, 0.10), 
+    38px 36px 21px 0px rgba(0, 0, 0, 0.03), 
+    60px 56px 23px 0px rgba(0, 0, 0, 0.00);
+    padding: 2rem 4rem;
+}
+
+.logging__registration {
+    color: #655132;
+    font-size: 1.125rem;
+    margin-top: 0;
+}
+
+.logging__registration-link {
+    color: #1D6829;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+
+.validation-form {
+    display:inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    height: auto;
+}
+
+.validation-form__label {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+.validation-form__input {
+    width: 22rem;
+    height: 3.5rem;
+    border-radius: 1rem;
+    background: #F2DBBA;
+    color: #311D13; 
+    padding-left: 1.25rem;
+    font-size: 1.13rem;
+}
+
+input::autofill {
+    background: #d8c0a0;
+}
+
+.validation__error {
+    margin: 0.5rem 0 0 0.5rem;
+    color:rgb(221, 50, 7);
+}
+
+.validation-form__input.error {
+    border: 3px solid rgb(221, 50, 7);
+}
+
+.validation-form__button {
+    flex-basis: 15rem 0;
+    max-width: 15rem;
+    justify-content: center;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+@media (max-width: 90rem){
+.container-power {
+    width: 0rem;
+    height: 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-power__eat {
+    position: absolute;
+    width: 95rem;
+    height: 73rem;
+    background-image: url(../png/power-eat1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    }
+}
+
+@media (max-width: 68rem) {
+    .container-power__eat {
+        background-image: url(../png/power-eat2.png);
+        width: 55rem;
+        height: 71rem;
+    }
+
+    .main-log {
+        padding: 8rem 0 2rem 0;
+        margin-bottom: 15rem;
+    }
+
+    .logging__form {
+        display:inline-flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        height: 13rem;
+    }
+
+    .logging__form-button {
+        width: 10rem;
+        height: 3.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 20rem) {
+    .container-power {
+        display: none;
+    }
+
+    .main-log__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+
+    .main-log {
+        padding: 5rem 0 2rem 0;
+        margin-bottom: 1rem;
+    }
+
+    .main-log__title {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .main-log__logging {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #F6E9D6;
+        border-radius: 0.5rem;
+        box-shadow: 
+        2px 2px 7px 0px rgba(0, 0, 0, 0.20), 
+        10px 9px 13px 0px rgba(0, 0, 0, 0.17), 
+        22px 20px 18px 0px rgba(0, 0, 0, 0.10), 
+        38px 36px 21px 0px rgba(0, 0, 0, 0.03), 
+        60px 56px 23px 0px rgba(0, 0, 0, 0.00);
+        padding: 1.2rem 1.5rem;
+    }
+
+    .logging__registration {
+        color: #655132;
+        font-size: 0.8rem;
+        margin-top: 0;
+    }
+
+    .validation-form__input {
+        width: 14rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        background: #F2DBBA;
+        color: #311D13; 
+        padding-left: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .validation__error {
+        margin: 0.3rem 0 0 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    .validation-form__input.error {
+        border: 2px solid rgb(221, 50, 7);
+    }
+
+    .validation-form__button {
+        width: 7rem;
+        height: 3rem;
+        font-size: 0.8rem;
+        border-radius: 0.7rem;
+    }
+}
