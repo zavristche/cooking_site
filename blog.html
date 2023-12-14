@@ -18,7 +18,11 @@
     <div class="container">
         <header class="header">
             <div class="container__header">
-                <a href="./index.html" class="header__logo" style="background-image: url(../svg/logo.svg);"></a>  
+                <a href="index.html">
+                    <svg class="header__logo">
+                        <use href="svg/sprite.svg#logo"></use>
+                    </svg>
+                </a> 
                 <div class="header__search">
                     <form class="search-form">
                         <div class="search-form__content">
@@ -126,7 +130,7 @@
                 <section class="main-blog__content-recepts">
                     <h2 class="recepts__title">Рецепты от Jinn</h2>
                     <div class="recepts__content">
-                        <article class="recipe-modul">
+                        <article class="recipe-modul" onclick="location.href= ('recept-page.html');">
                             <div class="recipe-module__overlay"></div>
                             <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
                             <div class="recipe-module__content">
@@ -147,7 +151,7 @@
                                 <p class="recipe-block__user">От Натали</p>
                             </div>
                         </article>
-                        <article class="recipe-modul">
+                        <article class="recipe-modul" onclick="location.href= ('recept-page.html');">
                             <div class="recipe-module__overlay"></div>
                             <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
                             <div class="recipe-module__content">
@@ -168,7 +172,7 @@
                                 <p class="recipe-block__user">От Натали</p>
                             </div>
                         </article>
-                        <article class="recipe-modul">
+                        <article class="recipe-modul" onclick="location.href= ('recept-page.html');">
                             <div class="recipe-module__overlay"></div>
                             <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
                             <div class="recipe-module__content">
@@ -189,7 +193,7 @@
                                 <p class="recipe-block__user">От Натали</p>
                             </div>
                         </article>
-                        <article class="recipe-modul">
+                        <article class="recipe-modul" onclick="location.href= ('recept-page.html');">
                             <div class="recipe-module__overlay"></div>
                             <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
                             <div class="recipe-module__content">
@@ -210,7 +214,7 @@
                                 <p class="recipe-block__user">От Натали</p>
                             </div>
                         </article>
-                        <article class="recipe-modul">
+                        <article class="recipe-modul" onclick="location.href= ('recept-page.html');">
                             <div class="recipe-module__overlay"></div>
                             <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
                             <div class="recipe-module__content">
@@ -231,7 +235,7 @@
                                 <p class="recipe-block__user">От Натали</p>
                             </div>
                         </article>
-                        <article class="recipe-modul">
+                        <article class="recipe-modul" onclick="location.href= ('recept-page.html');">
                             <div class="recipe-module__overlay"></div>
                             <div class="recipe-module__image" style="background-image: url(jpg/preview/1.jpg);"></div>
                             <div class="recipe-module__content">
@@ -253,7 +257,7 @@
                             </div>
                         </article>
                     </div>
-                    <button class="recepts__button">Смотреть все рецепты</button>
+                    <button class="recepts__button" onclick="location.href= ('search.html');">Смотреть все рецепты</button>
                 </section>
                 <section class="main-blog__content-compilations">
                     <h2 class="compilations__title">Подборки Jinn</h2>
