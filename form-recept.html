@@ -193,7 +193,30 @@
                         <div class="info-ingredients__checkboxes">
                             <template id="ingredient">
                                 <div class="checkboxes__item" >
-                                    <svg class="checkboxes__item-btn" viewBox="0 0 23 23" fill="none " xmlns="http://www.w3.org/2000/svg" onclick="this.parentNode.remove();">
+                                    <svg class="checkboxes__item-btn" viewBox="0 0 23 23" fill="none " xmlns="http://www.w3.org/2000/svg" onclick="this.parentNode.remove(); if(ingredList.querySelector('.ingred-error')) ingredList.removeChild(ingredList.querySelector('.ingred-error'))">
+                                        <use href="svg/sprite.svg#checkMinuse"></use>
+                                    </svg>
+                                    <input type="text" class="checkboxes__item-name" min="3" max="28" placeholder="Введите ингредиент...">
+                                    <input type="number" min="1" class="checkboxes__item-value" placeholder="1">
+                                    <select class="checkboxes__item-type" name="type-ingred">
+                                        <option value="pc">шт</option>
+                                        <option value="to-taste">по вкусу</option>
+                                        <option value="g">гр</option>
+                                        <option value="kg">кг</option>
+                                        <option value="ml">мл</option>
+                                        <option value="l">л</option>
+                                        <option value="tbsp">ст.л</option>
+                                        <option value="tsp">ч.л</option>
+                                        <option value="clove">гл</option>
+                                        <option value="clove">гл</option>
+                                        <option value="bunch">пуч</option>
+                                        <option value="bar">пл</option>
+                                    </select>
+                                </div>
+                            </template>
+                            <template id="decorate">
+                                <div class="checkboxes__item" >
+                                    <svg class="checkboxes__item-btn" viewBox="0 0 23 23" fill="none " xmlns="http://www.w3.org/2000/svg" onclick="this.parentNode.remove(); if(decoreList.querySelector('.ingred-error')) decoreList.removeChild(decoreList.querySelector('.ingred-error'))">
                                         <use href="svg/sprite.svg#checkMinuse"></use>
                                     </svg>
                                     <input type="text" class="checkboxes__item-name" min="3" max="28" placeholder="Введите ингредиент...">
@@ -267,8 +290,12 @@
                     <li class="footer__info-item">Дизайн: Вкусножуйкин</li>
                 </ul>
                 <ul class="footer__social">
-                    <a href="#" class="footer__social-item" style="background-image: url(../svg/VK.svg);"></a>
-                    <a href="#" class="footer__social-item" style="background-image: url(../svg/TG.svg);"></a>  
+                    <svg class="footer__social-item">
+                        <use href="svg/sprite.svg#tg"></use>
+                    </svg>
+                    <svg class="footer__social-item">
+                        <use href="svg/sprite.svg#vk"></use>
+                    </svg>
                 </ul>
             </div>
             <p class="footer__copyright">ААА “ВКУСНОЖУЙ.РУ”, 2077. ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>

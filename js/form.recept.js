@@ -211,19 +211,49 @@ document.getElementById("btn-minuse").addEventListener("click",
     });
 
 // Добавление ингредиентов
+let ingredList = document.querySelector('#ingredList');
+let decoreList = document.querySelector('#decorList');
+
 document.getElementById('addIngred').addEventListener('click', function(){
-    let ingredList = document.querySelector('#ingredList');
     let ingredPattern = document.querySelector('#ingredient');
-    let item = ingredPattern.content.cloneNode(true);
-    ingredList.appendChild(item);
+    let error = ingredList.querySelector('.ingred-error');
+    if(ingredList.children.length < 10) {
+        if(error) {
+            ingredList.removeChild(error);
+        }
+        validation = true;
+        let item = ingredPattern.content.cloneNode(true);
+        ingredList.appendChild(item);
+    } else {
+        validation = false;
+        if(!error){
+            let html = `<span class="ingred-error" id="">Нельзя добавить более 10 продуктов</span>`;
+            ingredList.insertAdjacentHTML( 'beforeend', html);
+        }
+    }
 });
 
 document.getElementById('addDecor').addEventListener('click', function(){
-    let ingredList = document.querySelector('#decorList');
-    let ingredPattern = document.querySelector('#ingredient');
-    let item = ingredPattern.content.cloneNode(true);
-    ingredList.appendChild(item);
+    let ingredPattern = document.querySelector('#decorate');
+    let error = decoreList.querySelector('.ingred-error');
+    if(decoreList.children.length < 10) {
+        if(error) {
+            decoreList.removeChild(error);
+        }
+        validation = true;
+        let item = ingredPattern.content.cloneNode(true);
+        decoreList.appendChild(item);
+    } else {
+        validation = false;
+        if(!error){
+            let html = `<span class="ingred-error">Нельзя добавить более 10 продуктов</span>`;
+            decoreList.insertAdjacentHTML( 'beforeend', html);
+        }
+    }
 });
+
+// let error = ingredList.querySelector('.ingred-error');
+
 
 // Шаги
 // function autoResizeSteps(areaName, rows){
