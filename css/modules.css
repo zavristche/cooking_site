@@ -193,35 +193,35 @@
     }
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 380px) {
     .recipe-modul {
-        width: 8rem;
-        height: 8rem;
+        width: 9.5rem;
+        height: 9.5rem;
         border-radius: 0.7rem;
     }
 
     .compil-modul {
-        width: 17.5rem;
-        height: 8rem;
+        width: 21.5rem;
+        height: 9.5rem;
         border-radius: 0.7rem;
     }
 
     .compil-module__image {
         width: 11rem;
-        height: 8rem;
+        height: 100%;
     }
 
     .comil-module__image-2 {
-        width: 7rem;
-        height: 4rem;
+        width: 10rem;
+        height: 4.75rem;
         left: 11rem;
     }
 
     .comil-module__image-3 {
-        width: 7rem;
-        height: 4rem;
+        width: 10rem;
+        height: 4.75rem;
         left: 11rem;
-        bottom: 4rem;
+        bottom: 4.75rem;
     }
 
     .recipe-module__content {

@@ -153,9 +153,9 @@ dialog select {
     
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 380px) {
     .container {
-        width: 20rem;
+        width: 380px;
     }
 
     body::-webkit-scrollbar {

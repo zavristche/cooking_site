@@ -261,7 +261,7 @@
   }
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 380px) {
   .eat-power {
     display: none;
     

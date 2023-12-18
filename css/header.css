@@ -95,9 +95,9 @@ height: 2rem;
     }
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 380px) {
     .header{
-      width: 20rem;
+      width: 380px;
     }
     .container__header {
       height: 3rem;

@@ -899,7 +899,7 @@
     }
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 380px) {
     .modal-compilate {
         display: flex;
         position: fixed;
@@ -1283,7 +1283,7 @@
     .picture-form__button-img {
         width: 2rem;
         margin-top: 0.5rem;
-        margin-left: 10.3rem;
+        margin-left: 14.5rem;
     }
 
     .comment {

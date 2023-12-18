@@ -728,7 +728,7 @@
     }
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 380px) {
     .main-recept {
         display: flex;
         flex-direction: column;

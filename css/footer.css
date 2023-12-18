@@ -61,7 +61,7 @@
   }
 }
 
-@media (max-width: 20rem) {
+@media (max-width: 380px) {
   .container__footer {
     width: 87%;
     padding: 0;
